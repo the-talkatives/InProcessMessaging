@@ -9,7 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7A89E813-4
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Talkatives.Extensions.Messaging.Abstractions", "src\Talkatives.Extensions.Messaging.Abstractions\Talkatives.Extensions.Messaging.Abstractions.csproj", "{E2715097-B4FD-433B-84E2-C55E63D161C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Talkatives.Extensions.Messaging.Dataflow", "src\Talkatives.Extensions.Messaging.Dataflow\Talkatives.Extensions.Messaging.Dataflow.csproj", "{8D14DBED-97EF-4793-87B2-BBDF2232E7A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Talkatives.Extensions.Messaging.Dataflow", "src\Talkatives.Extensions.Messaging.Dataflow\Talkatives.Extensions.Messaging.Dataflow.csproj", "{8D14DBED-97EF-4793-87B2-BBDF2232E7A3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Talkatives.InProcessMessageTestConsole", "test\Talkatives.InProcessMessageTestConsole\Talkatives.InProcessMessageTestConsole.csproj", "{5B8EC15B-A878-49CB-8716-C549134E7019}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +27,10 @@ Global
 		{8D14DBED-97EF-4793-87B2-BBDF2232E7A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D14DBED-97EF-4793-87B2-BBDF2232E7A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D14DBED-97EF-4793-87B2-BBDF2232E7A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B8EC15B-A878-49CB-8716-C549134E7019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B8EC15B-A878-49CB-8716-C549134E7019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B8EC15B-A878-49CB-8716-C549134E7019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B8EC15B-A878-49CB-8716-C549134E7019}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E2715097-B4FD-433B-84E2-C55E63D161C7} = {6A63D09A-6CA0-461B-8477-85B7C8B93FD2}
 		{8D14DBED-97EF-4793-87B2-BBDF2232E7A3} = {6A63D09A-6CA0-461B-8477-85B7C8B93FD2}
+		{5B8EC15B-A878-49CB-8716-C549134E7019} = {7A89E813-47A2-421B-B1D3-29013421D54B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CFEF9BC4-B521-45C6-B83C-1889FE5AB02D}
