@@ -19,7 +19,7 @@ namespace Talkatives.Extensions.Messaging.Dataflow
         /// <returns></returns>
         public static IServiceCollection RegisterGenericInProcPublisher(this IServiceCollection services, InprocMessageBusConfiguration configuration)
         {
-            services.AddSingleton<IInProcBusConfiguration>(configuration);
+            services.AddSingleton(configuration);
             return services.AddSingleton(typeof(IInprocMessageBus<>), typeof(InprocBufferedMessageBus<>));
         }
 

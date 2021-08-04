@@ -21,7 +21,7 @@ namespace Talkatives.InProcessMessageTestConsole
         public async Task OnNextAsync(T message)
         {
             _messages.Add(message);
-            Console.WriteLine("just checking");
+            Console.WriteLine("Message received by: {0}.  Messages: {1}", _id, message);
             await Task.CompletedTask;
         }
     }

@@ -2,7 +2,7 @@
 
 namespace Talkatives.Extensions.Messaging.Dataflow
 {
-    public class InprocMessageBusConfiguration : IInProcBusConfiguration
+    public class InprocMessageBusConfiguration
     {
         public int PublisherQueueSize { get; set; } = 100;
 
