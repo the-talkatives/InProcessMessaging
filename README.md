@@ -5,5 +5,13 @@ InProcessMessaging defines a lightweight infrastructural component that allows d
   3. This allows each component to autonomously evolve without worrying about how other componenets change. 
   4. Introduces messaging as a first class citizen within an application domain.
   5. Typical use cases include background processing using fire and forget mechanisms.
-
+  
+ ## Installation
+ Nuget package (coming soon)
  
+ ## Configuration
+ 
+ 
+ ## Contributions
+ PRs and feedback are welcome!
+
