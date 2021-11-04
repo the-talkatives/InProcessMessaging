@@ -7,7 +7,7 @@ InProcessMessaging defines a lightweight infrastructural component that allows d
   5. Typical use cases include background processing using fire and forget mechanisms.
   
  ## Installation
- Nuget package (coming soon)
+ Nuget package is available now for install.
  
  ## Configuration
  

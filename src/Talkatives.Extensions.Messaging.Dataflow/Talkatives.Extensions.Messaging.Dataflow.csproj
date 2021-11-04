@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Messaging  Dataflow is a library that implements a version of messaging abstractions using Dataflow components. This promotes and streamline the use of an eventing model within a service. This brings the advantage of decoupling that eventing provides across services to a single service.</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageTags>Messaging, Reactive Extensions, Domain Events</PackageTags>
+    <PackageProjectUrl>https://github.com/the-talkatives/InProcessMessaging</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,6 +16,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Talkatives.Extensions.Messaging.Abstractions\Talkatives.Extensions.Messaging.Abstractions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
