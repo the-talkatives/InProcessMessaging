@@ -1,9 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Talkatives.Extensions.Messaging.Abstractions;
 
 namespace Talkatives.Extensions.Messaging.Dataflow
@@ -22,15 +17,5 @@ namespace Talkatives.Extensions.Messaging.Dataflow
             services.AddSingleton(configuration);
             return services.AddSingleton(typeof(IInprocMessageBus<>), typeof(InprocBufferedMessageBus<>));
         }
-
-
-        //public static IServiceCollection AddInProcServiceBus<T>(this IServiceCollection services, int publisherQSize, TimeSpan publishTimeout)
-        //{
-        //    services.AddSingleton<IInProcBus<T>>(x => new InProcServiceBus<T>(x,
-        //        publisherQSize,
-        //        publishTimeout,
-        //        x.GetService<ILogger>()));
-        //    return services;
-        //}
     }
 }

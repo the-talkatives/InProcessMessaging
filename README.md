@@ -7,11 +7,63 @@ InProcessMessaging defines a lightweight infrastructural component that allows d
   5. Typical use cases include background processing using fire and forget mechanisms.
   
  ## Installation
- Nuget package is available now for install.
+ Nuget package is avaialble on nuget.org
  
- ## Configuration
+ Using nuget package manager or the console you can add the nuget to your project. 
+
+ ```
+ PM> Install-Package Talkatives.Extensions.Messaging.Dataflow -Version 1.0.0
+ ```
+
+ ## Getting Started
  
+ 1. Add the nuget package Talkatives.Extensions.Messaging.Dataflow and register the publisher in the pub component and the subscriber in the sub component
+
+ 2. Setup Publisher
+
+ ```csharp
+ //Registering the publisher. Note that while registering you dont need to specify the type of publisher
+ services.RegisterGenericInProcPublisher(new InprocMessageBusConfiguration
+            {
+                PublisherQueueSize = 100,
+                PublishTimeoutMSec = 10000
+            });
+
+
+
+  //Resolving the publisher and publishing a string message
+  var bus = _serviceProvider.GetService<IInprocMessageBus<string>>();
+  bus.Publish($"Hello");
+
+  //Resolving the publisher and publishing a PersonAdded event
+    var bus = _serviceProvider.GetService<IInprocMessageBus<PersonAdded>>();
+  bus.Publish(new PersonAdded {...});
+ ```
  
+ 3. Setup subscriber
+
+ ```csharp
+ //Inherit from IInprocMessageSubscriber to implement consumers
+public class Consumer01<string> : IInprocMessageSubscriber<string>
+{
+    public async Task OnNextAsync(string message)
+        {
+          //message processing logic goes here...
+
+
+public class Consumer02<string> : IInprocMessageSubscriber<string>
+{
+    public async Task OnNextAsync(string message)
+        {
+          //message processing logic goes here...
+
+
+
+//Register one or more consumers by type of messages being published
+services.AddSingleton<IInprocMessageSubscriber<string>, Consumer01<string>>();
+services.AddSingleton<IInprocMessageSubscriber<string>, Consumer02<string>>();
+ ```
+
  ## Contributions
  PRs and feedback are welcome!
 
